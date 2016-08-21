@@ -4,6 +4,7 @@ import Helmet from "react-helmet"
 // Import global CSS before other components and their styles
 import "./index.global.css"
 import styles from "./index.css"
+import "normalize.css/normalize.css"
 
 import Header from "../Header"
 import Footer from "../Footer"

@@ -60,8 +60,9 @@ export const makeConfig = (config = {}) => {
         // *.css => CSS Modules
         {
           test: /\.css$/,
-          exclude: /\.global\.css$/,
+          // exclude: /\.global\.css$/,
           include: path.resolve(__dirname, "web_modules"),
+          exclude: /node_modules/,
           loader: ExtractTextPlugin.extract(
             "style-loader",
             [ `css-loader?modules&localIdentName=${
@@ -75,8 +76,8 @@ export const makeConfig = (config = {}) => {
         },
         // *.global.css => global (normal) css
         {
-          test: /\.global\.css$/,
-          include: path.resolve(__dirname, "web_modules"),
+          test: /.css$/,
+          include: /node_modules/,
           loader: ExtractTextPlugin.extract(
             "style-loader",
             [ "css-loader", "postcss-loader" ].join("!"),
