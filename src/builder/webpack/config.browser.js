@@ -23,9 +23,6 @@ export default (config: PhenomicConfig): WebpackConfig => {
         cacheDirectory: join(cacheDir, "cacheDirectory"),
         environmentPaths: {
           root: config.cwd,
-          directories: [
-            "web_modules",
-          ],
           files: [
             "package.json",
             "webpack.config.babel.js",
