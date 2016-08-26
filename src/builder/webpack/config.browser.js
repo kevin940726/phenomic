@@ -8,9 +8,11 @@ import HardSourceWebpackPlugin from "hard-source-webpack-plugin"
 
 const chunkNameBrowser = "phenomic.browser"
 
-const cacheDir = findCacheDir({ name: "phenomic-hard-source-wp" })
-
 export default (config: PhenomicConfig): WebpackConfig => {
+  // Use different cache folder for hard-source-webpack-plugin on each env
+  const env = (config.production) ? "prod" : "dev"
+  const cacheDir = findCacheDir({ name: "phenomic-hard-source-wp" + env })
+
   const webpackConfig = commonWebpackConfig(config)
 
   return {
