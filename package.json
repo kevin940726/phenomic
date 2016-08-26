@@ -1,6 +1,6 @@
 {
   "name": "phenomic",
-  "version": "0.15.0",
+  "version": "0.16.2",
   "description": "Modern website generator based on the React and Webpack ecosystem.",
   "keywords": [
     "react",
@@ -60,7 +60,7 @@
     "opn": "^4.0.2",
     "pify": "^2.3.0",
     "portfinder": "^1.0.2",
-    "react-router-scroll": "^0.3.1",
+    "react-router-scroll": "^0.3.2",
     "redbox-react": "^1.2.2",
     "remark": "^5.0.0",
     "remark-autolink-headings": "^4.0.0",
@@ -76,8 +76,8 @@
     "valid-url": "^1.0.9",
     "webpack": "^1.11.0",
     "webpack-dev-middleware": "^1.2.0",
-    "webpack-error-notification": "^0.1.4",
     "webpack-hot-middleware": "^2.0.0",
+    "webpack-notifier": "^1.4.0",
     "yargs": "^4.3.1"
   },
   "devDependencies": {
@@ -109,11 +109,9 @@
     "jsdom": "^9.2.0",
     "lnfs": "^3.0.0",
     "mock-fs": "^3.9.0",
-    "nightmare": "^2.6.1",
     "npm-run-all": "^3.0.0",
     "npmpub": "^3.0.0",
     "nyc": "^8.1.0",
-    "png-jpg": "0.0.2",
     "react": "^15.0.0-rc.1",
     "react-addons-test-utils": "^15.0.0-rc.1",
     "react-dom": "^15.0.0-rc.1",
