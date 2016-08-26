@@ -5,8 +5,6 @@ import webpackDevMiddleware from "webpack-dev-middleware"
 import webpackHotMiddleware from "webpack-hot-middleware"
 import historyFallbackMiddleware from "connect-history-api-fallback"
 import WebpackErrorNotificationPlugin from "webpack-error-notification"
-import findCacheDir from "find-cache-dir"
-import { emptyDirSync } from "fs-extra"
 
 import opn from "opn"
 import debug from "debug"
@@ -19,7 +17,6 @@ import collection from "../phenomic-loader/cache.js"
 import pathToUri from "../_utils/path-to-uri"
 
 const log = debug("phenomic:builder:server")
-const cacheDir = findCacheDir({ name: "phenomic-hard-source-wp" })
 
 export default (config) => {
   const { webpackConfigBrowser: webpackConfig } = config
@@ -43,9 +40,6 @@ export default (config) => {
     const devEntries = [
       require.resolve("webpack-hot-middleware/client"),
     ]
-
-    // Empty hard-source-webpack-plugin
-    emptyDirSync(cacheDir)
 
     const devConfig = {
       ...webpackConfig,
